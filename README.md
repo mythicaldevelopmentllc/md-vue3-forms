@@ -28,7 +28,19 @@ You will need to update your tailwind.config.js file to include the following in
 
 Below is the list of components, their properties and examples of how to use them.
 
-### MDForm (Required)
+- [MDForm](#mdform)
+- [MDGroup](#mdgroup)
+- [MDText](#mdtext)
+- [MDCheckbox](#mdcheckbox)
+- [MDDatePicker](#mddatepicker)
+- [MDDraggablePicker](#mddraggablepicker)
+- [MDDropZone](#mddropzone)
+- [MDSelect](#mdselect)
+- [MDTextArea](#mdtextarea)
+
+### MDForm
+
+**(Required)**
 
 Every form is wrapped in this base MFForm component. This component provides a submit button, optional cancel button 
 and assignable actions for those buttons. You next the form elements you need for your form within this base element.
@@ -504,7 +516,7 @@ Text area with limit if needed.
 ```
 ![Text Area Example](./examples/example-textarea.png "Text Area Example")
 
-#### MDSelect Props
+#### MDTextArea Props
 
 | Prop        | Type             | Default | Required | Description                                                                      |
 |-------------|------------------|---------|----------|----------------------------------------------------------------------------------|
