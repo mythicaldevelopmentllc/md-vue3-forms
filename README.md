@@ -1,4 +1,7 @@
-# md-vue3-forms
+# Vue3 Forms
+
+---
+
 Set of simple form components for Vue 3
 
 ## Installation
@@ -210,9 +213,59 @@ Simple checkbox. Can default to checked or not and emits a single event.
 
 ### MDDatePicker
 
+Integrates the `@vuepic/vue-datepicker` package for a flexible datepicker field.
+
+[@vuepic/vue-datepicker](https://www.npmjs.com/package/@vuepic/vue-datepicker)
+
+```vue
+<template>
+  <MDForm class="my-10">
+    <MDGroup>
+      <!-- Basic, bare bones -->
+      <MDDatePicker id="date" v-model="state.start" />
+      <!-- With the time picker enabled -->
+      <MDDatePicker id="date" v-model="state.end" :enableTimePicker="true" />
+    </MDGroup>
+  </MDForm>
+</template>
+<script setup>
+  import { reactive } from 'vue';
+  // Import the form, group, label and checkbox components.
+  import { MDForm, MDGroup, MDDatePicker } from '@mythicaldev/md-vue3-forms';
+
+  const state = reactive({
+    start: new Date(),
+    end: new Date(),
+  });
+</script>
+```
+#### Basic, Bare bones
+![MDDatePicker Examples](./examples/example-datepicker.png "MDDatePicker Examples")
+
+#### With time picker enabled
+![MDDatePicker w/ timepicker 1 Examples](./examples/example-datepicker-w-time-1.png "MDDatePicker w/ timepicker 1 Examples")
+![MDDatePicker w/ timepicker 2 Examples](./examples/example-datepicker-w-time-2.png "MDDatePicker w/ timepicker 2 Examples")
+
+#### MDDatePicker Props
+
+| Prop             | Type    | Default    | Required | Description                                                                   |
+|------------------|---------|------------|----------|-------------------------------------------------------------------------------|
+| id               | String  |            | true     | The id of the form field.                                                     |
+| modelValue       | Date    | new Date() | true     | The property to update. This should be passed as `v-model` when implementing. |
+| enableTimePicker | Boolean | false      | false    | Determines if the time picker is enabled.                                     |
+| format           | String  | MM/dd/yyyy | false    | The format to apply to the date-time.                                         |
+| label            | String  |            | false    | The label to add to the field. Empty by default providing no label.           |
+| describedBy      | String  |            | false    | The `aria-describedby` value for the field.                                   |
+| help             | String  |            | false    | Text that will display under the field to give help or context.               |
+| error            | String  |            | false    | Error text to display under the field.                                        |
+| success          | Boolean | false      | false    | Style the field indicating success.                                           |
+| info             | Boolean | false      | false    | Style the field for information feedback                                      |
+| warning          | Boolean | false      | false    | Style the field as warning, for example when there is an error displayed.     |
+| required         | Boolean | false      | false    | Determines if the field is required or not.                                   |
+
 ### MDDraggablePicker
 
-Integrates the vue.draggable library allowing you to drag an item from one list to another.
+Integrates the vue.draggable package allowing you to drag an item from one list to another.
 
 [vue.draggable@next](https://github.com/SortableJS/vue.draggable.next)
 
@@ -471,19 +524,6 @@ Text area with limit if needed.
 | warning     | Boolean          | false   | false    | Style the field as warning, for example when there is an error displayed.        |
 | required    | Boolean          | false   | false    | Determines if the field is required or not.                                      |
 
-## TODO
-- Fix Unexpected mutation of "modelValue" prop.(vue/no-mutating-props) in MDDatePicker
-- TEST ALL COMPONENTS
-  - MDText (DONE)
-  - MDCheckbox (DONE)
-  - MDDatePicker
-  - MDDraggablePicker (DONE)
-  - MDDropZone (DONE)
-  - MDError (DONE)
-  - MDForm (DONE)
-  - MDGroup (DONE)
-  - MDHelpBlock (DONE)
-  - MDInput (DONE)
-  - MDLabel (DONE)
-  - MDSelect (DONE)
-  - MDTextArea (DONE)
+## License
+
+[MIT](https://opensource.org/licenses/MIT)

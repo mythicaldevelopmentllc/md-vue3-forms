@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Set of simple form components for Vue 3",
   "main": "./src/index.js",
+  "files": [
+    "src/index.js",
+    "src/**/*.vue",
+    "examples/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +19,7 @@
     "vue": "^3.0.0",
     "vue3-dropzone": "^0.0.7",
     "@heroicons/vue": "^2.0.13",
-    "@vuepic/vue-datepicker": "^4.2.2",
+    "@vuepic/vue-datepicker": "^4.2.3",
     "vuedraggable": "^4.1.0",
     "@headlessui/vue": "^1.7.7",
     "sweetalert2": "^11.4.24"

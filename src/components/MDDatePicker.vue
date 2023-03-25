@@ -9,9 +9,9 @@
   >
     <VueDatePicker
       class="w-full"
-      v-model="props.modelValue"
-      :format="props.format"
-      :enableTimePicker="props.enableTimePicker"
+      v-model="modelValue"
+      :format="format"
+      :enableTimePicker="enableTimePicker"
       autoApply
       @update:modelValue="updateInput"
     />
