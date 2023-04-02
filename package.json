@@ -19,7 +19,7 @@
     "vue": "^3.0.0",
     "vue3-dropzone": "^0.0.7",
     "@heroicons/vue": "^2.0.13",
-    "@vuepic/vue-datepicker": "^4.2.3",
+    "@vuepic/vue-datepicker": "^4.3.0",
     "vuedraggable": "^4.1.0",
     "@headlessui/vue": "^1.7.7",
     "sweetalert2": "^11.4.24"

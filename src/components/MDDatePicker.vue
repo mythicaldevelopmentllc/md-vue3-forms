@@ -9,7 +9,7 @@
   >
     <VueDatePicker
       class="w-full"
-      v-model="modelValue"
+      v-model="state.date"
       :format="format"
       :enableTimePicker="enableTimePicker"
       autoApply
@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+  import { reactive } from 'vue';
   import MDInput from './MDInput.vue';
   import VueDatePicker from '@vuepic/vue-datepicker';
   import '@vuepic/vue-datepicker/dist/main.css';
@@ -70,6 +71,10 @@
       default: false,
       required: false,
     },
+  });
+
+  const state = reactive({
+    date: props.modelValue,
   });
 
   function updateInput(modelData) {

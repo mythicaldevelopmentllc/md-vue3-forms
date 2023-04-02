@@ -162,13 +162,11 @@
       state.query === ''
         ? props.options
         : props.options.filter((option) => {
-            console.log(state.query);
             return `${option.value}-${option.label}`
               .toLowerCase()
               .replace(/\s+/g, '')
               .includes(state.query.toLowerCase().replace(/\s+/g, ''));
           });
-    console.log(value);
     return value;
   });
 </script>
