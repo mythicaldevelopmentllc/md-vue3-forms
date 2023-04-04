@@ -277,9 +277,9 @@ Integrates the `@vuepic/vue-datepicker` package for a flexible datepicker field.
 
 ### MDDraggablePicker
 
-Integrates the vue.draggable package allowing you to drag an item from one list to another.
+Integrates the sortableJS library to allow moving items from one list to another.
 
-[vue.draggable@next](https://github.com/SortableJS/vue.draggable.next)
+[sortableJS](https://github.com/SortableJS/Sortable)
 
 ```vue
 <template>
@@ -346,9 +346,7 @@ Integrates the vue.draggable package allowing you to drag an item from one list 
 
 | Event           | Description                                               |
 |-----------------|-----------------------------------------------------------|
-| onDragComplete  | Emitted when an item is dragged from one list to another. |
-| onAllAssigned   | Emitted when the **Assign All** button is clicked.        |
-| onAllRemoved    | Emitted when the **Remove All** button is clicked.        |
+| onUpdate  | Emitted when an item is dragged from one list to another. |
 
 ### MDDropZone
 
