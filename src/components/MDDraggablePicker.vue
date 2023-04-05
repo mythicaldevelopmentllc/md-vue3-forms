@@ -216,9 +216,3 @@
     return props.label !== '';
   });
 </script>
-
-<style scoped lang="scss">
-  .moving-card {
-    @apply opacity-50 bg-gray-100 border border-blue-400;
-  }
-</style>
