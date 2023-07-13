@@ -4,13 +4,11 @@
     <span v-if="required" class="text-red-500">*</span>
   </label>
   <div
-    v-bind="getRootProps()"
+    ref="dropZoneRef"
     class="border border-2 border-gray-600 flex justify-center items-center w-full h-48 cursor-pointer"
   >
-    <input v-bind="getInputProps()" :id="id" />
-    <p v-if="isDragActive.value">{{ props.hoverText }}</p>
+    <p v-if="isOverDropZone">{{ props.hoverText }}</p>
     <p v-else>{{ props.helpText }}</p>
-    <button @click="rest.open" class="invisible">open</button>
   </div>
   <div v-if="showPreview" class="flex justify-start mt-10">
     <div v-for="(file, index) in modelValue" :key="file.name" class="w-24 h24 mr-10">
@@ -29,10 +27,12 @@
 </template>
 
 <script setup>
-  import { computed } from 'vue';
-  import { useDropzone } from 'vue3-dropzone';
+  import { ref, computed } from 'vue';
+  import { useDropZone } from '@vueuse/core';
   import { TrashIcon } from '@heroicons/vue/24/outline';
   import Swal from 'sweetalert2';
+
+  const dropZoneRef = ref(null);
 
   // eslint-disable-next-line no-undef
   const emit = defineEmits(['update:modelValue', 'onDrop']);
@@ -96,18 +96,16 @@
     },
   });
 
-  // eslint-disable-next-line no-unused-vars
-  const onDrop = (acceptFiles, rejectReasons) => {
+  const onDrop = (files) => {
     let values = props.modelValue;
     values.push({
-      preview: URL.createObjectURL(acceptFiles[0]),
-      file: acceptFiles[0],
+      preview: URL.createObjectURL(files[0]),
+      file: files[0],
     });
     emit('update:modelValue', values);
     emit('onDrop');
   };
-  const { getRootProps, getInputProps, ...rest } = useDropzone({ onDrop });
-  const isDragActive = computed(() => rest.isDragActive);
+  const { isOverDropZone } = useDropZone(dropZoneRef, onDrop);
 
   const removeImage = (index) => {
     let values = props.modelValue;
