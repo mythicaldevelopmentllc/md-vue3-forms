@@ -1,16 +1,16 @@
-import MDForm from './components/MDForm.vue';
-import MDCheckbox from './components/MDCheckbox.vue';
-import MDDatePicker from './components/MDDatePicker.vue';
-import MDDraggablePicker from './components/MDDraggablePicker.vue';
-import MDDropZone from './components/MDDropZone.vue';
-import MDError from './components/MDError.vue';
-import MDGroup from './components/MDGroup.vue';
-import MDHelpBlock from './components/MDHelpBlock.vue';
-import MDInput from './components/MDInput.vue';
-import MDLabel from './components/MDLabel.vue';
-import MDSelect from './components/MDSelect.vue';
-import MDText from './components/MDText.vue';
-import MDTextArea from './components/MDTextArea.vue';
+import MDForm from './archive/Components/MDForm.vue';
+import MDCheckbox from './archive/Components/MDCheckbox.vue';
+import MDDatePicker from './archive/Components/MDDatePicker.vue';
+import MDDraggablePicker from './archive/Components/MDDraggablePicker.vue';
+import MDDropZone from './archive/Components/MDDropZone.vue';
+import MDError from './archive/Components/MDError.vue';
+import MDGroup from './archive/Components/MDGroup.vue';
+import MDHelpBlock from './archive/Components/MDHelpBlock.vue';
+import MDInput from './archive/Components/MDInput.vue';
+import MDLabel from './archive/Components/MDLabel.vue';
+import MDSelect from './archive/Components/MDSelect.vue';
+import MDText from './archive/Components/MDText.vue';
+import MDTextArea from './archive/Components/MDTextArea.vue';
 
 export {
   MDForm,
