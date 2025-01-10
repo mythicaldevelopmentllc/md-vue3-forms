@@ -1,8 +1,8 @@
 import { computed, defineComponent, h } from 'vue';
 import { CSS_NAMESPACE } from '../../constants';
 
-export const MDFormGroup = defineComponent({
-  name: 'MDFormGroup',
+export const MDGroup = defineComponent({
+  name: 'MDGroup',
   setup(_, { slots }) {
     return () => {
       return h('div', {

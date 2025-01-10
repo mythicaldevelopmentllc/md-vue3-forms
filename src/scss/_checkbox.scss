@@ -1,0 +1,30 @@
+@use "variables" as v;
+
+.#{v.$md-f-namespace}__checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.#{v.$md-f-namespace}__checkbox_checked {
+  --md-f-border-opacity: #{v.$md-f-border-opacity};
+  --md-f-text-opacity: #{v.$md-f-text-opacity};
+
+  border-width: 2px;
+  border-color: rgb(20 83 45 / var(--md-f-border-opacity, 1));
+  color: rgb(34 197 94 / var(--md-f-text-opacity, 1));
+}
+
+.#{v.$md-f-namespace}__checkbox_not_checked {
+  --md-f-border-opacity: #{v.$md-f-border-opacity};
+  --md-f-text-opacity: #{v.$md-f-text-opacity};
+  --md-f-bg-opacity: #{v.$md-f-bg-opacity};
+
+  border-width: 1px;
+  border-color: rgb(209 213 219 / var(--md-f-border-opacity, 1));
+
+  background-color: rgb(243 244 246 / var(--md-f-bg-opacity, 1));
+
+  &:hover {
+    background-color: rgb(229 231 235 / var(--md-f-bg-opacity, 1));
+  }
+}

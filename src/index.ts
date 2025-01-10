@@ -35,3 +35,4 @@ export * from './components/help';
 export * from './components/error';
 export * from './components/fields/input';
 export * from './components/fields/text';
+export * from './components/fields/checkbox';
