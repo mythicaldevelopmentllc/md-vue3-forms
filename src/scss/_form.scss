@@ -1,8 +1,6 @@
 @use "variables" as v;
 
 .#{v.$md-f-namespace}__Wrapper {
-  --md-f-bg-opacity: #{v.$md-f-bg-opacity};
-
   display: block;
   padding: 1.5rem;
 
@@ -40,10 +38,6 @@
 }
 
 .#{v.$md-f-namespace}__btn_cancel {
-  --md-f-bg-opacity: #{v.$md-f-bg-opacity};
-  --md-f-text-opacity: #{v.$md-f-text-opacity};
-  --md-f-border-opacity: #{v.$md-f-border-opacity};
-
   background-color: rgb(255 255 255 / var(--md-f-bg-opacity, 1));
   color: rgb(3 105 161 / var(--md-f-text-opacity, 1));
   border-width: 1px;
@@ -55,30 +49,21 @@
 }
 
 .#{v.$md-f-namespace}__btn_success {
-  --md-f-bg-opacity: #{v.$md-f-bg-opacity};
-  --md-f-text-opacity: #{v.$md-f-text-opacity};
-
   background-color: rgb(3 105 161 / var(--md-f-bg-opacity, 1));
   color: rgb(255 255 255 / var(--md-f-text-opacity, 1));
 }
 
 .#{v.$md-f-namespace}__label {
-  --md-f-text-opacity: #{v.$md-f-text-opacity};
-
   display: inline-block;
   margin-bottom: 0.5rem;
   color: rgb(55 65 81 / var(--md-f-text-opacity, 1));
 }
 
 .#{v.$md-f-namespace}__required {
-  --md-f-text-opacity: #{v.$md-f-text-opacity};
-
   color: rgb(239 68 68 / var(--md-f-text-opacity, 1));
 }
 
 .#{v.$md-f-namespace}__help {
-  --md-f-text-opacity: #{v.$md-f-text-opacity};
-
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -91,8 +76,6 @@
 }
 
 .#{v.$md-f-namespace}__error {
-  --md-f-text-opacity: #{v.$md-f-text-opacity};
-
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -109,8 +92,6 @@
 }
 
 .#{v.$md-f-namespace}__input_ {
-  --md-f-border-opacity: #{v.$md-f-border-opacity};
-
   border-width: 1px;
   border-color: rgb(209 213 219 / var(--md-f-border-opacity, 1));
 
@@ -122,29 +103,21 @@
 }
 
 .#{v.$md-f-namespace}__input_error {
-  --md-f-border-opacity: #{v.$md-f-border-opacity};
-
   border-width: 2px;
   border-color: rgb(220 38 38 / var(--md-f-border-opacity, 1));
 }
 
 .#{v.$md-f-namespace}__input_success {
-  --md-f-border-opacity: #{v.$md-f-border-opacity};
-
   border-width: 2px;
   border-color: rgb(22 163 74 / var(--md-f-border-opacity, 1));
 }
 
 .#{v.$md-f-namespace}__input_info {
-  --md-f-border-opacity: #{v.$md-f-border-opacity};
-
   border-width: 2px;
   border-color: rgb(37 99 235 / var(--md-f-border-opacity, 1));
 }
 
 .#{v.$md-f-namespace}__input_warning {
-  --md-f-border-opacity: #{v.$md-f-border-opacity};
-
   border-width: 2px;
   border-color: rgb(202 138 4 / var(--md-f-border-opacity, 1));
 }

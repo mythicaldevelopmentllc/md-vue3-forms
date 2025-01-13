@@ -1,4 +1,4 @@
-import { computed, defineComponent, h } from "vue";
+import {computed, defineComponent, Fragment, h} from "vue";
 import { CSS_NAMESPACE } from "../../../constants";
 import { MDLabel } from "../../label";
 import { MDHelp } from "../../help";
@@ -35,7 +35,9 @@ export const MDInput = defineComponent({
       }
 
       // Add the content slot
-      children.push(h('div', null, { default: () => slots }));
+      children.push(h('div', {
+        'class': 'display: flex;'
+      }, { default: () => slots }));
 
       // Add any help data if present
       if (hasHelp.value) {

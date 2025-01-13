@@ -1,4 +1,11 @@
 $md-f-namespace: 'MD-Forms' !default;
-$md-f-bg-opacity: 1;
-$md-f-text-opacity: 1;
-$md-f-border-opacity: 1;
+
+:root {
+  --md-f-font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans",
+  "Helvetica Neue", sans-serif;
+  --md-f-bg-opacity: 1;
+  --md-f-text-opacity: 1;
+  --md-f-border-opacity: 1;
+  --md-f-success-color: rgb(22 163 74 / var(--md-f-border-opacity, 1));
+  --md-f-error-color: rgb(220 38 38 / var(--md-f-border-opacity, 1));
+}
