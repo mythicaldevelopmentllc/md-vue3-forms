@@ -37,3 +37,4 @@ export * from './components/fields/input';
 export * from './components/fields/text';
 export * from './components/fields/checkbox';
 export * from './components/fields/datepicker';
+export * from './components/fields/draggable';

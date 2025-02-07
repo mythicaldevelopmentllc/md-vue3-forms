@@ -21,8 +21,6 @@ export const MDDatePicker = defineComponent({
   setup(props, { emit, attrs }) {
     return () => {
 
-      console.log(attrs);
-
       return h(MDInput,  {
         id: props.id,
         label: props.label,
